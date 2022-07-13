@@ -22,11 +22,11 @@
 }
 
 .city-details h4 {
-    font-size: 50px;
+    font-size: 25px;
 }
 
 .city-details p {
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .uvi_value_span {
@@ -41,7 +41,7 @@
 }
 
 .card {
-    width:15.6rem;
+    width:12rem;
     background-color: #093a6e;
     display: inline-block;
     margin-right: 1%;
@@ -53,6 +53,9 @@
 }
 
 #forecast-days {
-    font-size: 40px;
+    font-size: 25px;
 }
 
+#search-history {
+    margin-top: 5%;
+}

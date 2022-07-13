@@ -1,5 +1,7 @@
 var searchButtonEl = $('#form-element');
 var cityNameEl = $('#form1');
+var searchHistoryButtonEl = $('#button-list');
+var searchHistoryEl = $('#search-history');
 var cityNameResponse = document.getElementById('city-name');
 var tempValueResponse = document.getElementById('temp-value');
 var windValueResponse = document.getElementById('wind-value');
@@ -27,6 +29,10 @@ function getWeatherCurrentInfo(city) {
             humidityValueResponse.textContent = "Humidity : " + data.main.humidity + " %";
 
             // Add to local storage
+            var cityInLocalStorage = localStorage.getItem('CITY_NAME') || '[]'; // '['Seattle']'
+            var cityJson = JSON.parse(cityInLocalStorage); // ['Seattle']
+            cityJson.push(city); // ['Seattle' , 'Atlanta']
+            localStorage.setItem('CITY_NAME',JSON.stringify(cityJson));
 
             // Call forecast
             var cityLatitude = data.coord.lat;
@@ -118,5 +124,19 @@ searchButtonEl.on('submit', function(event) {
     getWeatherCurrentInfo(cityNameEl.val());
 });
 
-
 // Add buttons for history
+var cityInLocalStorage = localStorage.getItem('CITY_NAME') || '[]'; // '['Seattle']'
+var cityJson = JSON.parse(cityInLocalStorage); // ['Seattle']
+
+for (var i = 0; i < cityJson.length; i++) {
+    var buttonEl = $('<button>');
+    buttonEl.attr('class', 'btn btn-secondary btn-block');
+    buttonEl.attr('type', 'button');
+    buttonEl.attr('id', 'button-list')
+    searchHistoryEl.append(buttonEl);
+    buttonEl.text(cityJson[i]);
+    buttonEl.on('click', function() {
+        // Call weather API
+        getWeatherCurrentInfo(this.innerHTML);
+    });
+}
