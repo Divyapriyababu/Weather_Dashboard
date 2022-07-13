@@ -1,10 +1,10 @@
-.title-text{
+.title-text {
     margin-left: 40%;
     font-size: 40px;
     color:aliceblue   
 }
 
-.navbar{
+.navbar {
     background-color: midnightblue;
 }
 
@@ -20,3 +20,39 @@
 .city-details {
     border: 1px solid;
 }
+
+.city-details h4 {
+    font-size: 50px;
+}
+
+.city-details p {
+    font-size: 30px;
+}
+
+.uvi_value_span {
+    width: 70px;
+    border-radius: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#forecast-cards {
+    color: white;
+}
+
+.card {
+    width:15.6rem;
+    background-color: #093a6e;
+    display: inline-block;
+    margin-right: 1%;
+}
+
+.forecast {
+    margin-top: 5%;
+    margin-bottom: 5%; 
+}
+
+#forecast-days {
+    font-size: 40px;
+}
+
