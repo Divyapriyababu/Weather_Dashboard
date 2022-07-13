@@ -1,0 +1,22 @@
+.title-text{
+    margin-left: 40%;
+    font-size: 40px;
+    color:aliceblue   
+}
+
+.navbar{
+    background-color: midnightblue;
+}
+
+.container-fluid {
+    height: 100vh;
+    padding-top: 1%;
+}
+
+.city {
+    padding-right: 5%;
+}
+
+.city-details {
+    border: 1px solid;
+}
