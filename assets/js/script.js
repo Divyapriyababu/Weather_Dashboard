@@ -31,7 +31,9 @@ function getWeatherCurrentInfo(city) {
             // Add to local storage
             var cityInLocalStorage = localStorage.getItem('CITY_NAME') || '[]'; // '['Seattle']'
             var cityJson = JSON.parse(cityInLocalStorage); // ['Seattle']
-            cityJson.push(city); // ['Seattle' , 'Atlanta']
+            if (!cityJson.includes(city)) {
+                cityJson.push(city); // ['Seattle' , 'Atlanta']
+            }
             localStorage.setItem('CITY_NAME',JSON.stringify(cityJson));
 
             // Call forecast

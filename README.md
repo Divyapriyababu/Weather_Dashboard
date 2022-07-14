@@ -32,6 +32,18 @@ THEN I am again presented with current and future conditions for that city
 
 ## Changes added
 
+* Used OpenWeather APIs - GetCurrentWeather and Onecall APIs.
+
+* Used Grid layout from bootstrap.
+
+* Used jquery for action listeners.
+
+* Used localStorage to store the cities searched.
+
 ## Result
 
 Deployed URL: https://divyapriyababu.github.io/Weather_Dashboard
+
+![](./assets/screenshots/History_button.png)
+
+![](./assets/screenshots/Search_box.png)
